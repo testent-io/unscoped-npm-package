@@ -1,0 +1,24 @@
+{
+  "name": "testent",
+  "author": "Juha Sälli <juha@testent.io> (https://testent.io)",
+  "description": "Testing publishing package to NPM repository which has been cleaned from unnecessary files and package.json fields",
+  "version": "1.0.0",
+  "keywords": [
+    "Automation",
+    "Testing"
+  ],
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/testent-io/unscoped-npm-package/issues"
+  },
+  "homepage": "https://github.com/testent-io/unscoped-npm-package#readme",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/testent-io/unscoped-npm-package.git"
+  },
+  "scripts": {
+    "publish:makeTarPackage": "pnpm pack",
+    "publish:publishToNpmRepositoryTest": "pnpm publish --access public --publish-branch production --report-summary --no-git-checks --dry-run",
+    "publish:publishToNpmRepository": "pnpm publish --access public --publish-branch production --report-summary"
+  }
+}
